@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(218, 218, 218);
+}
+.navbar-brand img{
+    height: 40px;
+    width: 50px;
+}
+.hero{
+    background-color: rgb(173, 173, 184);
+}
+.hero h1 {
+    text-shadow: 2px 1px 2px rgb(29, 29, 70);
+}
+
+.hero p {
+    text-shadow: 1px 0.5px 0.5px  rgb(68, 64, 64);
+}
+
+.card {
+    height: 400px;
+    text-align: center;
+    background-color: rgb(212, 220, 230);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.card img{
+    height: 200px;
+}
+.course h2{
+    text-shadow:1px 1px 1px black;
+}
+.hero img {
+    animation: imageAnimation 5s infinite;
+}
+
+@keyframes imageAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
