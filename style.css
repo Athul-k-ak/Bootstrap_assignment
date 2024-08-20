@@ -50,3 +50,43 @@ body{
         transform: scale(1);
     }
 }
+.card-animation {
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    transition: box-shadow 0.3s ease;
+}
+
+.card-animation::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(90deg, #a8e6cf, #b3d9ff, #ffffff);
+    background-size: 200%;
+    border-radius: 10px;
+    animation: animate-card 4s linear infinite;
+    transition: filter 0.3s ease;
+}
+
+.card-animation:hover::before {
+    filter: brightness(0.8);
+}
+
+@keyframes animate-card {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
